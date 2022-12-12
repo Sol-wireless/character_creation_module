@@ -4,21 +4,21 @@ from random import randint
 def attack(char_name, char_class):
     if char_class == 'warrior':
         return (f'{char_name} damage to the enemy {5 + randint(3, 5)}')
-    if char_class == 'mage':
+    if char_class == 'magician':
         return (f'{char_name} damage to the enemy {5 + randint(5, 10)}')
     if char_class == 'healer':
         return (f'{char_name} damage to the enemy {5 + randint(-3, -1)}')
 def defense(char_name, char_class):
     if char_class == 'warrior':
         return (f'{char_name} blocked {10 + randint(5, 10)} damage')
-    if char_class == 'mage':
+    if char_class == 'magician':
         return (f'{char_name} blocked {10 + randint(-2, 2)} damage')
     if char_class == 'healer':
         return (f'{char_name} blocked {10 + randint(2, 5)} damage')
 def special(char_name, char_class):
     if char_class == 'warrior': 
         return (f'{char_name} used a special skill "Stamina {80 + 25}"')
-    if char_class == 'mage':
+    if char_class == 'magician':
         return (f'{char_name} used a special skill "Attack {5 + 40}"')
     if char_class == 'healer':
         return (f'{char_name} used a special skill "Defense {10 + 30}"')
@@ -29,7 +29,7 @@ def special(char_name, char_class):
 def start_training(char_name, char_class):
     if char_class == 'warrior':
         print(f'{char_name}, you are a Warrior, proficient in melee combat.')
-    if char_class == 'mage':
+    if char_class == 'magician':
         print(f'{char_name}, you are a Magician, masterfully taming the elements.')
     if char_class == 'healer':
         print(f'{char_name}, you are a Healer, a sorcerer who heals wounds.')
@@ -54,7 +54,7 @@ def choice_char_class():
         char_class = input('Enter the class of your character: Warrior — warrior, Magician — magician, Healer — healer: ')
         if char_class == 'warrior':
             print('Warrior — a fierce melee fighter. Strong, resilient, and brave.')
-        if char_class == 'mage':
+        if char_class == 'magician':
             print('Magician — a brilliant long-range fighter. Master of magical powers.')
         if char_class == 'healer':
             print('Healer — a powerful shaman. Draws strength from nature, faith, and spirits.')
